@@ -1,0 +1,1 @@
+# swoftx-constants
