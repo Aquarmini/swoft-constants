@@ -5,11 +5,9 @@
     "keywords": [
         "php",
         "swoole",
-        "swoft",
-        "db",
-        "model"
+        "swoft"
     ],
-    "description": "Swoft",
+    "description": "Swoft 常量组件",
     "authors": [
         {
             "name": "李铭昕",
