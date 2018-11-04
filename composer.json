@@ -25,18 +25,11 @@
         }
     },
     "require": {
-        "php": ">=7.0",
-        "swoft/framework": "^1.0.24"
+        "php": ">=7.1",
+        "limingxinleo/support-str": "^1.0"
     },
     "require-dev": {
         "swoft/swoole-ide-helper": "dev-master",
         "phpunit/phpunit": "^5.7"
-    },
-    "extra": {
-        "config-plugin": {
-            "swoft.components": [
-                "config/components.php"
-            ]
-        }
     }
 }
