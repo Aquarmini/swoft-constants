@@ -33,9 +33,10 @@ abstract class Constants
 
         $code = $arguments[0];
         $name = strtolower(substr($name, 3));
+        $class = get_called_class();
 
-        if (isset(static::$mapping[$name])) {
-            return isset(static::$mapping[$name]) ? static::$mapping[$name][$code] : '';
+        if (isset(static::$mapping[$class][$name])) {
+            return isset(static::$mapping[$class][$name][$code]) ? static::$mapping[$class][$name][$code] : '';
         }
 
         // 获取变量
@@ -45,7 +46,7 @@ abstract class Constants
         $adapter = new ReflectionAdapter(static::class);
         $result = $adapter->getAnnotationsByName($name, $classConstants);
 
-        static::$mapping[$name] = $result;
-        return isset(static::$mapping[$name][$code]) ? static::$mapping[$name][$code] : '';
+        static::$mapping[$class][$name] = $result;
+        return isset(static::$mapping[$class][$name][$code]) ? static::$mapping[$class][$name][$code] : '';
     }
 }
