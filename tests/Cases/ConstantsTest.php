@@ -30,5 +30,8 @@ class ConstantsTest extends AbstractTestCase
 
         $res = ErrorCode2::getMessage(ErrorCode2::TOKEN_INVALID);
         $this->assertEquals('TOKEN非法', $res);
+
+        $res = ErrorCode::getMessage(ErrorCode::SUCCESS);
+        $this->assertEquals('', $res);
     }
 }
