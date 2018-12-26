@@ -33,5 +33,35 @@ class ConstantsTest extends AbstractTestCase
 
         $res = ErrorCode::getMessage(ErrorCode::SUCCESS);
         $this->assertEquals('', $res);
+
+        $res = ErrorCode2::getMessage(ErrorCode2::TOKEN_INVALID_701);
+        $this->assertEquals('TOKEN非法701', $res);
     }
+
+    // public function testPattern()
+    // {
+    //     $pattern = "/\@Message\([\'|\\\"](.*)[\'|\\\"]\)/U";
+    //     $time = microtime(true);
+    //     $data1 = '* @Message("Test")';
+    //     $data1 = "* @Message('Test')";
+    //
+    //     for ($i = 0; $i < 100000; $i++) {
+    //         preg_match($pattern, $data1, $result);
+    //         // preg_match($pattern, $data2, $result);
+    //     }
+    //
+    //     echo microtime(true) - $time;
+    //     echo PHP_EOL;
+    //
+    //     $pattern = "/\@Message\(\'(.*)\'\)/U";
+    //     $time = microtime(true);
+    //
+    //     for ($i = 0; $i < 100000; $i++) {
+    //         preg_match($pattern, $data1, $result);
+    //         // preg_match($pattern, $data2, $result);
+    //     }
+    //
+    //     echo microtime(true) - $time;
+    //     echo PHP_EOL;
+    // }
 }

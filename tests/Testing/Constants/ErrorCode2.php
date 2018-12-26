@@ -16,4 +16,9 @@ class ErrorCode2 extends Constants
      * @Message('TOKEN非法')
      */
     const TOKEN_INVALID = 700;
+
+    /**
+     * @Message("TOKEN非法701")
+     */
+    const TOKEN_INVALID_701 = 701;
 }
